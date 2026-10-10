@@ -17,21 +17,23 @@ export function Experience() {
       </div>
       <div className="roles">
         {experience.roles.map((item, index) => (
-          <Reveal key={item.period} className="role">
-            <span className="role-number">0{index + 1}</span>
-            <div className="role-main">
-              <span className="role-period">{item.period}</span>
-              <h3>{item.role}</h3>
-              <p className="role-company">
-                {item.company} <span>· {item.place}</span>
-              </p>
-            </div>
-            <ul>
-              {item.points.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
-          </Reveal>
+          <article key={item.period}>
+            <Reveal className="role">
+              <span className="role-number">0{index + 1}</span>
+              <div className="role-main">
+                <span className="role-period">{item.period}</span>
+                <h3>{item.role}</h3>
+                <p className="role-company">
+                  {item.company} <span>· {item.place}</span>
+                </p>
+              </div>
+              <ul>
+                {item.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            </Reveal>
+          </article>
         ))}
       </div>
       <div className="education">

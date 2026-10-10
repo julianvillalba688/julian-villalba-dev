@@ -626,7 +626,8 @@ section[id] {
   gap: 3rem;
   padding-top: 4rem;
 }
-.toolset > span {
+.toolset > h3 {
+  margin: 0;
   color: var(--coral);
 }
 .toolset > div {
@@ -634,18 +635,28 @@ section[id] {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem 2rem;
 }
-.toolset p {
+.toolset-group {
   display: grid;
   gap: 0.45rem;
-  margin: 0;
   font-size: 0.76rem;
   line-height: 1.65;
 }
-.toolset strong {
+.toolset-group h4 {
+  margin: 0;
   color: var(--paper);
+  font-size: inherit;
 }
-.toolset p span {
+.toolset-group ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.35rem;
+  margin: 0;
+  padding: 0;
   color: var(--muted-light);
+  list-style: none;
+}
+.toolset-group li:not(:last-child)::after {
+  content: ',';
 }
 
 .experience {

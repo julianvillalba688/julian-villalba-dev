@@ -12,10 +12,10 @@ export function Services() {
           <p className="profile-lede">{profile.description}</p>
         </Reveal>
       </div>
-      <blockquote className="profile-quote">
+      <p className="profile-quote">
         <span aria-hidden="true">“</span>
         {profile.approach}
-      </blockquote>
+      </p>
       <div className="capabilities">
         {profile.capabilities.map((item) => (
           <Reveal key={item.label} className="capability">
@@ -32,17 +32,23 @@ export function Services() {
           </Reveal>
         ))}
       </div>
-      <div className="toolset">
-        <span className="tiny-label">EN LA CAJA DE HERRAMIENTAS</span>
+      <section className="toolset" aria-labelledby="toolset-title">
+        <h3 id="toolset-title" className="tiny-label">
+          TECNOLOGÍAS Y MÉTODOS
+        </h3>
         <div>
           {profile.toolset.map((group) => (
-            <p key={group.label}>
-              <strong>{group.label}</strong>
-              <span>{group.items}</span>
-            </p>
+            <div className="toolset-group" key={group.label}>
+              <h4>{group.label}</h4>
+              <ul>
+                {group.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
-      </div>
+      </section>
     </section>
   )
 }

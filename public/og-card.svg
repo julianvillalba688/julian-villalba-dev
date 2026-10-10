@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#141714"/>
+  <path d="M80 80H1120M80 550H1120" stroke="#5f665f" stroke-width="2"/>
+  <text x="80" y="145" fill="#fb9073" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="4">JULIÁN DAVID VILLALBA PERTUZ</text>
+  <text x="80" y="300" fill="#f7f4ec" font-family="Arial, sans-serif" font-size="88" font-weight="700">Desarrollo</text>
+  <text x="80" y="405" fill="#d9f568" font-family="Arial, sans-serif" font-size="88" font-weight="700">full-stack.</text>
+  <text x="80" y="515" fill="#f7f4ec" font-family="Arial, sans-serif" font-size="28">React · TypeScript · Node.js  /  Barranquilla, Colombia</text>
+</svg>

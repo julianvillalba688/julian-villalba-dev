@@ -15,16 +15,18 @@ export default function ProjectCard({
   return (
     <article className={`project project-${index + 1}`}>
       <div className="project-visual">
-        <img
-          src={showImage ? project.imageSrc : undefined}
-          alt={showImage ? project.imageAlt : ''}
-          width={1200}
-          height={900}
-          loading="lazy"
-          decoding="async"
-          className={showImage ? 'project-image' : 'project-image is-empty'}
-          onError={() => setFailed(true)}
-        />
+        {showImage && (
+          <img
+            src={project.imageSrc}
+            alt={project.imageAlt}
+            width={1200}
+            height={900}
+            loading="lazy"
+            decoding="async"
+            className="project-image"
+            onError={() => setFailed(true)}
+          />
+        )}
         {!showImage && (
           <div className="visual-caption" aria-hidden="true">
             <span>{portfolioContent.ui.imagePending}</span>
